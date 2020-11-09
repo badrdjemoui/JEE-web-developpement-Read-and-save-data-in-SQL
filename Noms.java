@@ -26,14 +26,14 @@ public class Noms {
         	
             statement = connexion.createStatement();
 
-            // Exécution de la requête
+            // ExÃ©cution de la requÃªte
             resultat = statement.executeQuery("SELECT nom, prenom FROM noms;");
-            System.out.print(resultat.getCursorName());
-            // Récupération des données
+           
+            // RÃ©cupÃ©ration des donnÃ©es
             while (resultat.next()) {
                 String nom = resultat.getString("nom");
                 String prenom = resultat.getString("prenom");
-                System.out.print(nom);
+               
                 Utilisateur utilisateur = new Utilisateur();
                 utilisateur.setNom(nom);
                 utilisateur.setPrenom(prenom);
